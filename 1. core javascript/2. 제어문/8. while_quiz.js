@@ -1,15 +1,15 @@
 // 1번
 
-// var firstNum = +prompt("첫번째 숫자를 입력");
-// var secondNum = +prompt("두번째 숫자를 입력");
+var firstNum = +prompt("첫번째 숫자를 입력");
+var secondNum = +prompt("두번째 숫자를 입력");
 
-// var n = firstNum;
-// var sum = 0;
-// while (n <= secondNum) {
-//   sum += n;
-//   n++;
-// }
-// alert(`${firstNum} ~ ${secondNum}까지의 누적합: ${sum}`);
+var n = firstNum;
+var sum = 0;
+while (n <= secondNum) {
+  sum += n;
+  n++;
+}
+alert(`${firstNum} ~ ${secondNum}까지의 누적합: ${sum}`);
 
 // 두번째 숫자가 첫번째 숫자보다 클 때
 
