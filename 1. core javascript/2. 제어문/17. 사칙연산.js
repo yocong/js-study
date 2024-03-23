@@ -1,34 +1,34 @@
-// 사칙연산 1번
-alert("재미있는 사칙연산 게임");
-alert("즐겁게 문제를 푸시다가 지겨우면 0을 누르세요~");
-alert("====================================");
+// // 사칙연산 1번
+// alert("재미있는 사칙연산 게임");
+// alert("즐겁게 문제를 푸시다가 지겨우면 0을 누르세요~");
+// alert("====================================");
 
-// 카운트
-var count = 1;
-while (true) {
+// // 카운트
+// var count = 1;
+// while (true) {
 
-  // 정답 생성
-  var num1 = Math.floor(Math.random() * 50) + 1;
-  var num2 = Math.floor(Math.random() * 50) + 1;
+//   // 정답 생성
+//   var num1 = Math.floor(Math.random() * 50) + 1;
+//   var num2 = Math.floor(Math.random() * 50) + 1;
 
-  // 문제
-  alert(`Q${count}. ${num1} + ${num2} = ??`);
-  var answer = +prompt("");
-  count++;
+//   // 문제
+//   alert(`Q${count}. ${num1} + ${num2} = ??`);
+//   var answer = +prompt("");
+//   count++;
 
-  if (answer === num1 + num2) {
-    alert("정답입니다!");
-  } else if (answer !== num1 + num2 && answer !== 0) {
-    alert("틀렸어요~");
-  } else if (answer === 0) {
-    alert("게임을 종료합니다!");
-    break;
-  }
-  if (count === 5) {
-    alert("게임을 종료합니다!");
-    break;
-  }
-}
+//   if (answer === num1 + num2) {
+//     alert("정답입니다!");
+//   } else if (answer !== num1 + num2 && answer !== 0) {
+//     alert("틀렸어요~");
+//   } else if (answer === 0) {
+//     alert("게임을 종료합니다!");
+//     break;
+//   }
+//   if (count === 5) {
+//     alert("게임을 종료합니다!");
+//     break;
+//   }
+// }
 
 // 사칙연산 2번
 alert("재미있는 사칙연산 게임");
