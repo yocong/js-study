@@ -9,50 +9,35 @@
 4. 전체멤버를 정확하게 삭제할때까지 프로그램은 계속되어야 합니다.
 */
 
-
-
-var tvxq = ['유노윤호', '최강창민', '영웅재중', '믹키유천', '시아준수'];
-
-while (tvxq.length > 0) {
-  var modifyTarget = prompt(`현재 멤버: [${tvxq}]\n삭제할 이름을 입력하세요.`);
-  
-  var index = tvxq.indexOf(modifyTarget);
-  
-  if (tvxq.includes(modifyTarget)) {
-    // 삭제 타겟이 있는경우 -> 삭제 진행
-    tvxq.splice(index, 1);
-    alert(`삭제 완료!\n남은 멤버: [${tvxq}]`);
-  } else {
-    // 없는 경우
-    alert(`${deleteMember}은(는) 잘못된 이름입니다.\n다시 입력하세요!`);
-  }
-}
-
-
-
-
-
-
-
-
-
+// var tvxq = ["유노윤호", "최강창민", "영웅재중", "믹키유천", "시아준수"];
 
 // while (tvxq.length > 0) {
-//   // 삭제할 멤버 이름 입력
-//   var deleteMember = prompt(`현재 멤버: [${tvxq}]\n삭제할 이름을 입력하세요.`);
-
-//   for(var m of tvxq) {
-//     if (deleteMember !== m) {
-//       alert(`${deleteMember}은(는) 잘못된 이름입니다.\n다시 입력하세요!`);
-//       break;
-//     } else if (deleteMember === m && tvxq.length !== 0) {
-//       tvxq.splice(tvxq[m], 1);
-//       alert(`삭제 완료!\n남은 멤버: [${tvxq}]`);
-//       break;
-//     } else if(tvxq.length === 0) {
-//       alert(`삭제 완료!\n남은 멤버: []`);
-//       alert(`모든 멤버가 삭제되었습니다.`);
-//       break;
-//     }
+//   var deleteTarget = prompt(`현재 멤버: [${tvxq}]\n삭제할 이름을 입력하세요.`);
+//   if (tvxq.includes(deleteTarget)) {
+//     // 삭제 타겟이 있는경우 -> 삭제 진행
+//     var index = tvxq.indexOf(deleteTarget);
+//     tvxq.splice(index, 1);
+//     alert(`삭제 완료!\n남은 멤버: [${tvxq}]`);
+//   } else {
+//     // 없는 경우
+//     alert(`${deleteMember}은(는) 잘못된 이름입니다.\n다시 입력하세요!`);
 //   }
 // }
+
+var tvxq = ["유노윤호", "최강창민", "영웅재중", "믹키유천", "시아준수"];
+
+while (tvxq.length > 0) {
+  var modifyMember = prompt(`현재 멤버: [${tvxq}]\n삭제할 이름을 입력하세요.`);
+
+  if (tvxq.includes(modifyMember)) {
+    var index = tvxq.indexOf(modifyMember);
+    tvxq.splice(index, 1);
+    alert(`삭제 완료!\n남은 멤버: [${tvxq}]`);
+  } else if (tvxq.length === 0) {
+    alert(`삭제 완료!\n남은 멤버: []`);
+    alert(`모든 멤버가 삭제되었습니다.`);
+    break;
+  } else {
+    alert(`${modifyMember}은(는) 잘못된 이름입니다.\n다시 입력하세요!`);
+  }
+}
