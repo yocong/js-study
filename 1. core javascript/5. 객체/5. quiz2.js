@@ -34,38 +34,72 @@ Q. 회원의 아이디정보와 비밀번호 정보가 들어있는 객체 user�
 */
 
 
+// // 위 객체에서 배열만 추출
+// var userList = userInfo.userList;
+
+// while (true) {
+//   // 계정을 입력받고 해당 계정이 존재하는 계정인지를 확인
+//   var inputAccount = prompt('아이디를 입력하세요~'); // 사용자 입력한 계정명
+
+//   // 회원목록 배열을 반복순회하여 입력한 계정명과 일치하는 계정이 있는지 체크
+//   var foundUser = null;
+//   for (var user of userList) {
+//     if (inputAccount === user.account) {
+//       foundUser = user;
+//       break;
+//     }
+//   }
+
+//   // 입력한 계정명과 일치하는 계정이 있다면?
+//   if (foundUser !== null) {
+//     // console.log('일단 너 회원가입했네?');
+//     // 비번 검증
+//     // 사용자에게 비번 입력받기
+//     var inputPassword = prompt('비번을 입력하세요~');
+//     if (inputPassword === foundUser.password) {
+//       alert(`${foundUser.username}님 로그인 성공!!`);
+//       break;
+//     } else {
+//       alert('비번이 틀려써~~ ㅋ');
+//     }
+//   } else {
+//     alert('가입부터 하지?');
+//   }
+// }
+
+
 // 위 객체에서 배열만 추출
 var userList = userInfo.userList;
 
-while (true) {
-  // 계정을 입력받고 해당 계정이 존재하는 계정인지를 확인
-  var inputAccount = prompt('아이디를 입력하세요~'); // 사용자 입력한 계정명
+// 계정을 입력받고 해당 계정이 존재하는지 확인
+var inputAccount = prompt('아이디를 입력하세요.'); // 사용자 입력한 계정명
 
-  // 회원목록 배열을 반복순회하여 입력한 계정명과 일치하는 계정이 있는지 체크
-  var foundUser = null;
-  for (var user of userList) {
-    if (inputAccount === user.account) {
-      foundUser = user;
-      break;
-    }
-  }
+// 회원목록 배열을 반복순회하여 입력한 계정명과 일치하는 계정이 있는 체크
 
-  // 입력한 계정명과 일치하는 계정이 있다면?
-  if (foundUser !== null) {
-    // console.log('일단 너 회원가입했네?');
-    // 비번 검증
-    // 사용자에게 비번 입력받기
-    var inputPassword = prompt('비번을 입력하세요~');
-    if (inputPassword === foundUser.password) {
-      alert(`${foundUser.username}님 로그인 성공!!`);
-      break;
-    } else {
-      alert('비번이 틀려써~~ ㅋ');
-    }
-  } else {
-    alert('가입부터 하지?');
+var foundUser = null;
+for (var user of userList) {
+  if(inputAccount === user.account) {
+    foundUser = user;
+    break;
   }
 }
+
+
+if (foundUser !== null) {
+  // console.log('회원가입 했네?');
+  // 비번 검증
+  // 사용자에게 비번 입력받기
+  var inputPassword = prompt('비번을 입력하세요.');
+  if(inputPassword === foundUser.password) {
+    alert(`${foundUser.username}님 로그인 성공!!`);
+  } else {
+    alert('비번 틀렸어!');
+  }
+} else {
+  alert('가입부터 하지?');
+}
+
+
 
 
 
@@ -78,7 +112,7 @@ while (true) {
 //   // 1. 입력된 아이디가 객체에 존재하는 key라면
 //   for (var user of userInfo.userList) {
 //     if (user.account === idInput) {
-//       var passwordInput = prom  1ㄷpt("비밀번호를 입력하세요.");
+//       var passwordInput = prompt("비밀번호를 입력하세요.");
 
 //       // 비밀번호 일치 여부
 //       for (var user of userInfo.userList) {
