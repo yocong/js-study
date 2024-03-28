@@ -136,6 +136,5 @@ console.log("=====================");
 const triple = numbers.find(n => n % 3 === 0);
 console.log(`triple: ${triple}`);
 
-const fifty = userList.some(user => user.age >= 50 && user.age < 60);
-console.log(fifty);
+
 
