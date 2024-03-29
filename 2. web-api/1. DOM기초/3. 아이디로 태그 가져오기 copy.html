@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="fruits">
+    <li id="apple" class="f-item">사과</li>
+    <li id="banana" class="f-item">바나나</li>
+    <li id="grape" class="f-item">포도</li>
+    <li id="peach" class="f-item">복숭아</li>
+  </ul>
+
+  <script>
+    const $banana = document.getElementById('banana'); // $ 붙어있으면 안에 태그가 있구나~
+    console.log($banana.textContent);
+
+    $banana.textContent = '부네너';
+    $banana.pet = '바나나원숭이';
+    
+    const $peach = document.getElementById('peach');
+    $peach.style['font-style'] = 'italic';
+
+    // id가 grape인 요소노드객체를 취득하여
+    // 배경색상을 violet색으로 조작하세요.
+    const $grape = document.getElementById('grape');
+    // $grape.style['background-color'] = 'violet';
+    $grape.style.backgroundColor = 'violet'; // 자바스크립트는 케멀케이스로
+    $grape.style.width = 'fit-content';
+  </script>
+</body>
+</html>
