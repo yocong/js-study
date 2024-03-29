@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="fruits">
+    <li class="f-item ap">사과</li>
+    <li class="f-item bn">바나나</li>
+    <li id="grape" class="f-item gp">포도</li>
+    <li class="f-item pc">복숭아</li>
+  </ul>
+
+  <script>
+    
+    // 아이디로 태그를 가져오는 것과는 다르게 내가 알고있는 방법을
+    // 이용해서 불러올 수 있다.
+
+    // const $grape = document.querySelector('.gp');
+    // const $grape = document.querySelector('#fruits li:nth-child(3)');
+    // const $grape = document.querySelector('.bn + li');
+    const $grape = document.querySelector('#grape');
+    console.log($grape);
+
+    $grape.textContent = '맛있는 포도';
+
+    // const $fItemList = document.querySelectorAll('.f-item');
+    // [...array] 을 통해 유사배열 -> 배열로 바꿀 수 있음
+    const $fItemList = [...document.querySelectorAll('.f-item')];
+    console.log($fItemList);
+
+    // for(const $f of $fItemList) {
+    //   $f.style.color = 'red';
+    // }
+
+    $fItemList.forEach($f => {
+      $f.style.color = 'blue';
+    });
+    
+    // $fItemList.pop();
+
+    // 유사 배열: 객체 형태를 유지한 배열
+    // 배열은 아니기 때문에 배열문법 사용 불가능
+    // push, pop, shift, unshift 등...
+    const foods = {
+      0: '짜장면',
+      1: '짬뽕',
+      2: '볶음밥',
+      length: 3,
+      age: 30
+    };
+  </script>
+</body>
+</html>

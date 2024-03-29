@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="fruits">
+    <li class="f-item">사과</li>
+    <li class="f-item">바나나</li>
+    <li class="f-item">포도</li>
+    <li class="f-item">복숭아</li>
+  </ul>
+
+  <script>
+    // console.log(document);
+    // console.log(document.documentElement); // html태그 지칭
+    const html = document.documentElement;
+    html.classList.add('my-html');
+
+    console.log(html.children[1]); // body
+    // const body = html.children[1];
+    const body = document.body;
+    body.style.background = 'gray';
+
+  </script>
+</body>
+</html>
