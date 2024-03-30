@@ -1,7 +1,7 @@
 var num = 27;
 console.log(typeof num);
 
-// 정수x 실수형태로 출력
+// 정수x 실수형태로 출력 (자바스크립트의 특징)
 console.log(num / 5);
 
 var foodName = `깐풍기`;
@@ -19,7 +19,6 @@ var elem = `
 console.log(elem);
 console.log("=======================");
 
-// 2.
 var month = 4;
 var day = 5;
 var anni = "식목일";
@@ -38,7 +37,7 @@ console.log(flag);
 
 var TRUE = true;
 
-// undefined: 아직 값이 없는 상태 (고의로 값 안넣은 거 아님
+// undefined: 아직 값이 없는 상태 (고의로 값 안넣은 거 아님)
 // null : 일부로 값을 없앤 상태 (고의로 값을 없앰)
 var petName;
 console.log(petName);
