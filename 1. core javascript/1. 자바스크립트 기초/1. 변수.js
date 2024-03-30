@@ -36,6 +36,6 @@ var $myPetName_;
 // var For; (o)
 // var lEt; (o)
 
-const $orange = "#ffa808";
+const $orange = "#ffa808"; // $ 붙이는건 관례 (태그가 들어있다는 증거)
 $orange = "sasdasd";
 console.log($orange);

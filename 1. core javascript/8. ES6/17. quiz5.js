@@ -3,6 +3,7 @@
 // 해당 숫자부터 카운트가 증가합니다.
 
 function createCounter(n) {
+  // 시작 숫자
   let count = n;
   return function() {
     return ++count;
@@ -18,21 +19,26 @@ console.log(counterFromFive()); // 10
 
 
 // createCalculator를 호출하면 반환되는 헬퍼함수는 
-// 3가지의 기능을 갖고 있는데
+// 3가지의 기능을 갖고 있는데 add는 더하기 기능을 수행
+// substract는 빼기 기능을 수행 getTotal은 현재 값을 가져옴
 
 function createCalculator(){
 
   let total = 0;
+  // createCalculator 함수 안에 add, subtract, getTotal 함수 3개 만듦
+  // add와 subtract는 파라미터를 받아야함 숫자가 적용되는 함수라서
+  // getTotal은 결과
   const add = (n) => total += n;
   const subtract = (n) => total -= n;
   const getTotal = () => total;
 
-  const calculator = {
-    add,
-    subtract,
-    getTotal
-  }
-  return calculator;
+  // 객체를 생성해서 3가지 함수를 객체에 넣고 return 
+
+  return {
+    add: add, // add
+    subtract: subtract, // subtract
+    getTotal, getTotal // getTotal
+  };
 };
 
 
