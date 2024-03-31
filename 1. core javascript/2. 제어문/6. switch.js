@@ -5,6 +5,7 @@ var season = prompt('선호하는 계절을 입력하세요');
 // 조건을 판별할 변수 (비교식 X, 문자값이나 숫자값만 써야함)
 switch(season) {
 
+  // case를 한꺼번에 2개이상 걸 수 있음
   case '봄': case 'spring':
     alert('봄에는 여의도 가세요');
     break;
