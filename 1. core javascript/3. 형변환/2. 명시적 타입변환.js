@@ -11,25 +11,26 @@ var result3 = +x + +y;
 console.log(result);
 console.log(result2);
 console.log(result3);
+console.log(typeof result3); // number
 
-var m = '' + 10 + 20;
-console.log(m);
+// var m = '' + 10 + 20;
+// console.log(m);
 
-var f = "" + false;
+// var f = "" + false;
 
-console.log('=====================');
+// console.log('=====================');
 
-console.log(Boolean('hello'));
-console.log(Boolean(null));
-console.log(Boolean(!!999)); // !을 하나 더 붙여서 원래대로 돌림
-console.log(Boolean(!!undefined));
+// console.log(Boolean('hello'));
+// console.log(Boolean(null));
+// console.log(Boolean(!!999)); // !을 하나 더 붙여서 원래대로 돌림
+// console.log(Boolean(!!undefined));
 
-// 회원 로그인 여부 확인
-function isLogin() {
-  // const token = window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
-  // return token !== null;
+// // 회원 로그인 여부 확인
+// function isLogin() {
+//   // const token = window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
+//   // return token !== null;
 
-  return !!window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
-}
+//   return !!window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
+// }
 
-const isLogin = () => !!window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
+// const isLogin = () => !!window.localStorage.getItem('LOGIN_ACCESS_TOKEN');
