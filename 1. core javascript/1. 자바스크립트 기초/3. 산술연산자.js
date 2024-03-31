@@ -29,7 +29,7 @@ var n4 = ++n3;
 console.log(`n3: ${n3}, n4; ${n4}`);
 
 var xx = 5;
-// xx++가 훨씬 빠름
+// xx++ > xx += 1 (속도 측면)
 xx += 1; // xx++
 
 // xx--;

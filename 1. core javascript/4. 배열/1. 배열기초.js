@@ -6,7 +6,7 @@ var food3 = '자몽';
 var all = `${food1}, ${food2}, ${food3}`;
 
 var arr = [10, 20, 30, 40];
-console.log(typeof arr);
+console.log(typeof arr); // object (배열은 객체 안에 포함되는 개념)
 
 console.log(arr[1]);
 console.log(arr[2] ** 2);

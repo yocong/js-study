@@ -20,10 +20,11 @@
 //     alert("정답입니다!");
 //   } else if (answer !== num1 + num2 && answer !== 0) {
 //     alert("틀렸어요~");
-//   } else if (answer === 0) {
+//   } else {
 //     alert("게임을 종료합니다!");
 //     break;
 //   }
+
 //   if (count === 5) {
 //     alert("게임을 종료합니다!");
 //     break;

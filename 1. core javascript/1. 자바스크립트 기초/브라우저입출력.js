@@ -16,6 +16,7 @@ console.log(`${food}의 왕 ${userName}`);
 // var resultFlag = confirm(`혹시 얼마 있니? 가진거 다 내놔 `);
 // console.log(`나의 대답: ${resultFlag}`);
 
+// +prompt()를 입력하면 숫자로 입력해야함
 var n1 = +prompt('첫번째 수를 입력하세요!');
 var n2 = +prompt('두번째 수를 입력하세요!');
 

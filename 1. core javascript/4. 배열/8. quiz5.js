@@ -35,13 +35,13 @@ while (true) {
   );
   if (choice === '1') {
     var newName = prompt('추가할 새로운 멤버의 이름을 입력하세요.');
-    tvxq.push(newName);
+    tvxq.push(newName); // push로 추가 (배열이므로)
     alert(`${newName}이(가) 추가되었습니다.`);
   } else if (choice === '2') {
     var delName = prompt('삭제할 멤버의 이름을 입력하세요.');
-    var idx = tvxq.indexOf(delName);
+    var idx = tvxq.indexOf(delName); // 삭제할 멤버의 인덱스 확인
     if (idx !== -1) {
-      tvxq.splice(idx, 1);
+      tvxq.splice(idx, 1); // 배열에 존재한다면 삭제
       alert(`${delName}이(가) 삭제되었습니다.`);
     } else {
       alert(`${delName}은(는) 잘못된 이름입니다.\n다시 입력하세요!`);

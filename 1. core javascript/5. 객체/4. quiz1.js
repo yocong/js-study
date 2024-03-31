@@ -32,6 +32,6 @@ var salaries = {
 
 var total = 0;
 for (var money in salaries) {
-  total += salaries[money];
+  total += salaries[money]; // 돈을 추가 (값)
 }
 console.log(total);

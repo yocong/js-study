@@ -23,7 +23,7 @@ console.log(`flag: ${flag}`);
 
 console.log('======================');
 
-// slice(): 배열을 원하는 범위만큼 분할4
+// slice(): 배열을 원하는 범위만큼 분할
 var sliced = foodList.slice(1, 3);
 console.log(`sliced: ${sliced}`);
 
@@ -77,3 +77,6 @@ console.log(foodList);
 
 // 2번부터 끝까지 삭제
 foodList.splice(2);
+
+// slice()는 원하는 만큼의 범위 반환
+// splice()는 원하는 만큼 삭제나 삽입하고 반환

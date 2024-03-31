@@ -17,11 +17,12 @@ while (true) {
 
   var modifyMember = prompt(`현재 멤버: [${tvxq}]\n수정할 이름을 입력하세요.`);
   
-  // 수정할 멤버가 포함 되어있다면
+  // 수정할 멤버가 tvxq 배열에 포함 되어있다면?
   if (tvxq.includes(modifyMember)) {
+    // 수정할 멤버의 index 확인
     var idx = tvxq.indexOf(modifyMember);
-    // 새로운 멤버로 수정
     var newMember = prompt(`새로운 멤버 이름을 입력하세요.`);
+    // 새로운 멤버로 수정
     tvxq.splice(idx, 1, newMember);
     alert(`수정 완료!\n현재 멤버: [${tvxq}]`);
     break;

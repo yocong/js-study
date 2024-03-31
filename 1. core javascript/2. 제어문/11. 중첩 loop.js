@@ -11,7 +11,7 @@
 // 구구단 2단
 // 단수
 for (var level = 2; level <= 9; level++) {
-  console.log(`#구구단 ${level}단`);
+  console.log(`# 구구단 ${level}단`);
   for (var line = 1; line <= 9; line++)
     console.log(`-> ${level} x ${line} = ${level * line}`);
 }

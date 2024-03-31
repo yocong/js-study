@@ -29,8 +29,11 @@ var tvxq = ["유노윤호", "최강창민", "영웅재중", "믹키유천", "시
 while (tvxq.length > 0) {
   var modifyMember = prompt(`현재 멤버: [${tvxq}]\n삭제할 이름을 입력하세요.`);
 
+  // tvxq 배열에 내가 삭제할 멤버가 존재한다면?
   if (tvxq.includes(modifyMember)) {
+    // 삭제할 멤버의 인덱스를 찾아서
     var index = tvxq.indexOf(modifyMember);
+    // splice를 통해 삭제
     tvxq.splice(index, 1);
     alert(`삭제 완료!\n남은 멤버: [${tvxq}]`);
   } else if (tvxq.length === 0) {
