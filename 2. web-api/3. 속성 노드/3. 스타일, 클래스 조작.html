@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: orange;
+      font-size: 20px;
+      color:red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .green {
+      color:greenyellow;
+      background: green;
+    }
+    .blue {
+      color:aqua;
+      background: blue;
+    }
+    .circle {
+      border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+  <div class="box green" style="font-weight: 700;">Hello</div>
+
+  <button id="add">변환</button>
+
+  <script>
+    const $box = document.querySelector('.box');
+    const $btn = document.getElementById('add');
+
+    $box.style.fontStyle = 'italic';
+
+    // 클래스 조작
+    // $box.className = 'box blue'; // green -> blue
+    // $box.setAttribute('class', 'box blue');
+    
+    // 클래스 추가
+    $box.classList.add('circle');
+    $box.classList.add('aaa', 'bbb', 'ccc');
+    
+    // 클래스 제거
+    $box.classList.remove('green');
+    $box.classList.remove('aaa', 'ccc');
+    $box.classList.add('green'); // green 다시 추가
+
+    // 클래스 교체 (old, new)
+    $box.classList.replace('green', 'blue');
+
+    // 클래스 존재 유무 확인
+    console.log($box.classList.contains('box'));
+    console.log($box.classList.contains('rapid'));
+
+    $btn.addEventListener('click', () => {
+      const CLASS_NAME = "circle"
+      const boxClassList = $box.classList;
+      // 현재 박스가 네모모양이면 원으로 변경
+      // 원이면 네모로 변경
+
+      // 아래와 동일
+      boxClassList.toggle(CLASS_NAME);
+
+    //   if(boxClassList.contains(CLASS_NAME)) {
+    //     boxClassList.remove(CLASS_NAME);
+    //   } else {
+    //     boxClassList.add(CLASS_NAME);
+    //   }
+    });
+  </script>
+</body>
+</html>
