@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul class="users">
+    <li data-user-number="4321" data-role="common">뽀로로</li>
+    <li data-user-number="9999" data-role="admin">루피</li>
+  </ul>
+
+  <script>
+    // $ 붙어있으면 태그가 들어있음
+    const [$user1, $user2] = [...document.querySelectorAll('.users li')];
+    
+    // userNumber에서 data는 빼고 입력하며 캐멀케이스로
+    const pororoNubmer = $user1.dataset.userNumber; 
+    console.log(pororoNubmer); // string
+
+    const loopyRole = $user2.dataset.role;
+    console.log(loopyRole);
+
+    // 수정
+    $user2.dataset.role = 'gold';
+
+    // 추가
+    $user1.dataset.userPhoneNumber = '01012341234';
+
+    // 삭제
+    delete $user1.dataset.userPhoneNumber;
+    
+  </script>
+</body>
+</html>
