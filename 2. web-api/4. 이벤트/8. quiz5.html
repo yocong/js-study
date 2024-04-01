@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <input class="input" type="text" placeholder="글자 크기를 픽셀 단위로 입력" />
+    <div class="comment">여기 있는 텍스트의 크기를 조정해보세요!</div>
+  
+  <script>
+      const $input = document.querySelector(".input");
+      const $comment = document.querySelector(".comment");
+
+      // input을 입력했을 때 -> comment의 글자 크기 변환
+      $input.addEventListener('change', () => {
+        $comment.style.fontSize = $input.value;
+      });
+  </script>
+</body>
+</html>
