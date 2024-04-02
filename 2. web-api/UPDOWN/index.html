@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css 연결 -->
+    <!-- reset.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- js 연결 -->
+    <!-- defer가 있으면 나중에 실행되어 script가 head에 있어도 적용 -->
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="main">
+        <h1 class="main-title">신나는 UP&DOWN 게임</h1>
+        <div class="number-wrapper">
+          <h2>
+            <em id="begin">1</em>부터 <em id="end">100</em>사이의 숫자를
+            클릭하세요.
+          </h2>
+          <div id="numbers">
+            <!-- .icon{$}*10 -->
+            <!-- <div class="icon">1</div> -->
+          </div>
+        </div>
+      </section>
+
+      <aside class="result">
+        <div id="up">UP!!</div>
+        <div id="down">DOWN!!</div>
+      </aside>
+
+      <div id="finish">Congratulation!!!</div>
+    </div>
+  </body>
+</html>

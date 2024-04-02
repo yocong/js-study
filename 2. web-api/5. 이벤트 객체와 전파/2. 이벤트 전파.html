@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #fruits {
+        padding: 50px;
+        border: 2px solid red;
+      }
+      #fruits li {
+        background: yellow;
+        margin-bottom: 10px;
+      }
+
+      #fruits li:first-child {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+      }
+
+      #fruits li:last-child {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li class="apple">Apple</li>
+      <li class="banana">Banana</li>
+      <li class="grape">Grape</li>
+    </ul>
+
+    <script>
+      const $ul = document.getElementById("fruits");
+      
+      const $apple = $ul.firstElementChild;
+      
+      // 부모 -> 자식 : 캡처링
+      // 자식이 이벤트 걸려있으면 부모를 타고 올라가며 이벤트 전부 발생하게 만듦 : 버블링
+      
+      $ul.addEventListener("click", e => {
+        console.log('ul의 클릭이벤트 발생!');
+        console.log(e);
+      });
+      $apple.addEventListener("click", e => {
+        console.log('li.apple의 클릭이벤트 발생!');
+      });
+    </script>
+  </body>
+</html>

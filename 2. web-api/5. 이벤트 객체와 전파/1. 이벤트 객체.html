@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+  
+  <p>아무 곳이나 클릭하세요</p>
+  <em class="msg"></em>
+
+  <hr>
+
+  <input type="text" id="txt">
+  <p class="show"></p>
+
+  <script>
+    document.addEventListener('click', ({x, y, shiftKey}) => {
+      // console.log(e);
+
+      const $em = document.querySelector('.msg');
+
+      // shift를 눌렀을 때 작동 (x, y좌표)
+      if (shiftKey) {
+        $em.textContent = `x: ${x}, y: ${y}`;
+      } else {
+        $em.textContent = '';
+      }
+    });
+
+    const $txt = document.getElementById('txt');
+    $txt.addEventListener('keyup', (e) => {
+      // console.log(e);
+
+      const $show = document.querySelector('.show');
+
+      // 입력후 Enter를 눌렀을 때만 작동
+      if(e.key === 'Enter') {
+        $show.textContent = $txt.value;
+        $txt.value = ''; // 입력 후 input은 지움
+      }
+    });
+
+    window.addEventListener('scroll', (e) => {
+      console.log(window.scroll);
+    });
+  </script>
+
+</body>
+</html>
