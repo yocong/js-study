@@ -3,6 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실시간 글자 크기 조정</title>
+</head>
+<body>
+
+  <input type="text" id="fontSizeInput" placeholder="글자 크기를 픽셀 단위로 입력하세요">
+  <div id="content">여기 있는 텍스트의 크기를 조정해보세요!</div>
+  <div id="warning" style="color: red; display: none;">유효하지 않은 입력입니다! 숫자를 입력해주세요.</div>
+
+  <script>
+    const fontSizeInput = document.getElementById('fontSizeInput');
+    const content = document.getElementById('content');
+    const warning = document.getElementById('warning');
+  
+    fontSizeInput.addEventListener('input', function() {
+      const fontSize = fontSizeInput.value;
+  
+      // 입력된 값이 숫자인지 확인
+      // NaN 비교는 비교연산자로 불가능함 (isNaN으로 함)
+      if (!isNaN(fontSize) && fontSize !== '') {
+        content.style.fontSize = `${fontSize}px`;
+        warning.style.display = 'none';
+      } else {
+        warning.style.display = 'block';
+      }
+    });
+  </script>
+  
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
@@ -20,3 +61,4 @@
   </script>
 </body>
 </html>
+ -->
