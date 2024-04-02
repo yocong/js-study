@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <p class="msg"></p>
+
+  <p id="clock"></p>
+
+  <script>
+    const $msg = document.querySelector('.msg');
+
+    // setInterval(() => {
+    //   $msg.textContent += '안뇽~~\n';
+    // }, 500);
+
+    const $clock = document.getElementById('clock');
+
+    // 현재 시간 가져오기
+    // console.log(now.toLocaleTimeString());
+    
+    setInterval(() => {
+      const now = new Date();
+      $clock.textContent = now.toLocaleTimeString();
+    }, 1000);
+
+  </script>
+
+</body>
+
+</html>
