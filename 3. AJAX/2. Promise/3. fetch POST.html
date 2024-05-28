@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>
+    댓글내용: <input type="text" id="reply-text">
+  </div>
+  <div>
+    작성자: <input type="text" id="reply-writer">
+  </div>
+  <div>
+    <button id="register">등록</button>
+  </div>
+
+  <p id="reply"></p>
+
+  <script>
+    // GET방식을 제외한 나머지 것들은 두 번째 파라미터 필요
+    document.getElementById('register').onclick = e => {
+      const requestInfo = {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({ /// JS -> JSON으로 변환해서 보냄
+          text: document.getElementById('reply-text').value,
+          author: document.getElementById('reply-writer').value,
+          bno: 102
+        })
+      };
+
+      fetch('http://localhost:8383/api/v1/replies', requestInfo)
+        .then(res => res.json())
+        .then(json => {
+          document.getElementById('reply').innerHTML = `
+            ${json[0].writer}
+          `;
+        })
+    };
+
+
+  </script>
+</body>
+</html>
