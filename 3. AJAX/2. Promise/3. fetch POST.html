@@ -24,7 +24,7 @@
     document.getElementById('register').onclick = e => {
       const requestInfo = {
         method: 'POST',
-        headers: {
+        headers: { // 요청 헤더 정보를 key, value 로 묶음
           'content-type': 'application/json'
         },
         body: JSON.stringify({ /// JS -> JSON으로 변환해서 보냄

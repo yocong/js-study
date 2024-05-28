@@ -161,7 +161,7 @@
 
       }
 
-      // 영화 API를 호출하는 함수
+      // 영화 API를 호출하는 함수 (기본값: 다운로드 수)
       function fetchMovies(condition='download_count') {
 
         fetch(`https://yts.mx/api/v2/list_movies.json?sort_by=${condition}`)
@@ -211,7 +211,7 @@
       const $movie = document.querySelector('.movie-list');
 
       $movie.addEventListener('click', e => {
-        if (!e.target.matches('.movie-list .movie *')) return;
+        if (!e.target.matches('.movie-list .movie *')) return; // 틀 외의 것을 클릭 못하게
         // console.log('영화 클릭@');
 
         // console.log(e.target.closest('.movie').dataset.movieId);
