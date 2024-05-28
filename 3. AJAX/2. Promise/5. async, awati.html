@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <button id="show">댓글조회!</button>
+  <script>
+
+    function fetchGet() {
+      const result = fetch('http://localhost:8383/api/v1/replies/100');
+      // console.log(result);
+
+      const json = result.then(res => res.json());
+      // console.log(json);
+
+      const data = json.then(data => {
+        console.log('then내부:', data);
+        return '하하호호';
+      });
+      console.log('then외부:', data);
+    }
+
+    // async함수는 기본적으로 Promise를 소비하는 함수
+    async function fetchGet2() {
+      // await : then 메서드를 대신 호출해서 Promise를 거치지 않고
+      //         PromiseResult를 바로 가져옴
+      const result = await fetch('http://localhost:8383/api/v1/replies/100');
+      // console.log(result);
+
+      const json = await result.json();
+      console.log(json);
+    }
+
+    document.getElementById('show').onclick = e => {
+      fetchGet2();
+    };
+
+  </script>
+
+</body>
+</html>
