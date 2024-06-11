@@ -1,5 +1,5 @@
 
-// 1개의 li태그 처리
+// li 태그 렌더링 담당
 class ProductItem {
 
   constructor(prod) {
@@ -24,6 +24,11 @@ class ProductItem {
         </div>
       </div>
     `;
+    const $btn = $prodLi.querySelector('button');
+    $btn.addEventListener('click', e => {
+      console.log(title);
+      console.log('버튼 클릭!!');
+    });
 
     return $prodLi;
   }
