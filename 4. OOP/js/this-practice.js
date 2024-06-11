@@ -8,6 +8,7 @@ function foo() {
 
 // foo();
 
+// 객체 메서드에서의 this
 const car = {
   madeBy: 'Hyundai',
   model: '그랜져',
@@ -17,7 +18,7 @@ const car = {
   }
 }
 
-// car.showInfo();
+car.showInfo();
 
 // 이벤트 핸들러의 this - function으로 선언시 이벤트를 건 요소
 const $btn = document.getElementById('btn')
@@ -25,8 +26,8 @@ const $btn = document.getElementById('btn')
 const buttonHandler = function (e){
   console.log("버튼 클릭!")
   console.log(this)
-  $btn.style.background = 'red';
-  this.style.background = 'red';
+  // $btn.style.background = 'red';
+  this.style.background = 'red'; // $btn을 가르킴
 };
 
 $btn.addEventListener('click', buttonHandler); // this는 $btn
