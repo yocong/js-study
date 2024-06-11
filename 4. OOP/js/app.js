@@ -1,5 +1,6 @@
 
 import Product from "./components/Product.js";
+import ProductItem from "./components/ProductItem.js";
 
 // 상품 데이터
 const p1 = new Product('에어팟', 200000, '에어팟으로 노래를 들어요.', 'https://www.apple.com/v/airpods/v/images/overview/airpods_3rd_gen__dhy5bknhvtqq_large.jpg');
@@ -20,21 +21,8 @@ const productList = {
     // 반복해서 li태그를 생성
     // console.log('products: ', this.products);
     this.products.forEach((prod) => {
-      const $prodLi = document.createElement('li');
-      $prodLi.classList.add('product-item');
-      $prodLi.innerHTML = `
-      <div>
-        <img src="${prod.image}" alt="${prod.title}">
-        <div class="product-item__content">
-          <h2>${prod.title}</h2>
-          <h3>${prod.price}원</h3>
-          <p>${prod.desc}</p>
-          <button>담기</button>
-        </div>
-      </div>
-    `;
-
-      $prodList.appendChild($prodLi);
+      const product = new ProductItem(prod);
+      $prodList.appendChild(product.render());
     });
 
     // div#app에 ul추가
