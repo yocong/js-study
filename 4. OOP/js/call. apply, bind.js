@@ -52,8 +52,8 @@ const $input = document.getElementById('fruit');
 const $btn = document.getElementById('btn');
 
 
-// input이 red로 바뀌었으면 좋겠을 때 bind를 사용해서 return 받음
-// $btn.addEventListener('click', clickHandler.bind($input));
+// btn을 누를 시 clickHandler의 bind 메서드가 실행되어 this로 $input을 반환하게됨
+$btn.addEventListener('click', clickHandler.bind($input));
 
 // bind를 통해 이벤트핸들러에 파라미터 전달 가능
 // $btn.addEventListener('click', clickHandler.bind($btn, '사과'));
